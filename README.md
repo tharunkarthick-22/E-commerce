@@ -1,16 +1,91 @@
-# React + Vite
+# 🛒 NexCart – E-Commerce Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+NexCart is a responsive e-commerce website built using React.js. This project was created to practice and demonstrate modern frontend development concepts including component-based architecture, state management, routing, responsive UI design, and interactive product experiences.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 🏠 Responsive home page
+- 🔍 Product search functionality
+- 📱 Product categories
+- 🛍️ Product listing and product details
+- 🛒 Add products to cart
+- ➕ Increase/decrease product quantity
+- 🗑️ Cart management
+- 💰 Dynamic cart total calculation
+- 🔗 React Router navigation
+- 🎞️ Interactive product/category banners using Swiper.js
+- 📱 Responsive navigation for mobile and desktop
+- 🔝 Smooth "Back to Top" functionality
+- 🔔 Toast notifications for cart actions
+- 💻 Responsive product card layout
 
-## React Compiler
+## 🛠️ Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React.js
+- JavaScript
+- Redux Toolkit
+- React Router DOM
+- Tailwind CSS
+- Bootstrap
+- Swiper.js
+- React Icons
+- React Hot Toast
+- Vite
 
-## Expanding the ESLint configuration
+## 📂 Main Concepts Practiced
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React Functional Components
+- React Hooks
+- Redux Toolkit state management
+- Global cart state
+- Product searching and filtering
+- Dynamic routing with URL parameters
+- Responsive design with Tailwind CSS
+- Reusable components
+- Conditional rendering
+- Array methods such as `map()`, `filter()`, `find()`, and `some()`
+- Browser smooth scrolling
+- Responsive Swiper carousels
+
+## 🛒 Cart Functionality
+
+The cart allows users to:
+
+- Add products to the cart
+- Prevent duplicate products from being added
+- Increase product quantity
+- Decrease product quantity
+- Remove products when required
+- Calculate the total price dynamically
+- Navigate directly to the cart when a product is already added
+
+## 📱 Responsive Design
+
+NexCart is designed to work across different screen sizes, including:
+
+- Mobile
+- Tablet
+- Laptop/Desktop
+
+The navigation and search experience adapt based on screen size, while the product grid and Swiper banners use responsive breakpoints.
+
+## 🎯 Project Purpose
+
+This project was developed as a frontend learning project to gain hands-on experience building a real-world style e-commerce application using React and modern frontend technologies.
+
+## 🔮 Future Improvements
+
+- User authentication
+- Wishlist functionality
+- Product filtering by category and price
+- Product reviews and ratings
+- Checkout page
+- Payment gateway integration
+- Backend API integration
+- Database integration
+- Order history
+- User profile management
+
+## 👨‍💻 Author
+
+Tharun J
