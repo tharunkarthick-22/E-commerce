@@ -3,12 +3,12 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import headphones from "../assets/banner-png/nexCart_banner_headphones.png";
-import laptops from "../assets/banner-png/nexCart_banner_laptops.png";
-import mobiles from "../assets/banner-png/nexCart_banner_mobiles.png";
-import monitors from "../assets/banner-png/nexCart_banner_monitors.png";
-import tablets from "../assets/banner-png/nexCart_banner_tablets.png";
-import tws from "../assets/banner-png/nexCart_banner_tws.png";
+import headphones from "../assets/banner-png/banner-headphones.png";
+import laptops from "../assets/banner-png/banner-laptops.png";
+import mobiles from "../assets/banner-png/banner-mobiles.png";
+import monitors from "../assets/banner-png/banner-monitors.png";
+import tablets from "../assets/banner-png/banner-tablets.png";
+import tws from "../assets/banner-png/banner-tws.png";
 
 
 const SwiperList = () => {
