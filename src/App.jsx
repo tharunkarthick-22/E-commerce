@@ -14,8 +14,8 @@ function App() {
   return (
     <>
       <div className="Container">
-        <BrowserRouter>
-        <ScrollToTop></ScrollToTop>
+        <BrowserRouter basename="/E-commerce">
+          <ScrollToTop></ScrollToTop>
           <Routes>
             <Route element={<Layout />}>
               <Route path="/" element={<Home />} />
@@ -25,8 +25,11 @@ function App() {
               <Route path="/cart" element={<Cart />} />
 
               <Route path="/wishList" element={<WishList />} />
-              <Route path="/underConstruction" element={<UnderConstruction />} ></Route>
-              <Route path="/thanks" element={<Thanks />} ></Route>
+              <Route
+                path="/underConstruction"
+                element={<UnderConstruction />}
+              ></Route>
+              <Route path="/thanks" element={<Thanks />}></Route>
             </Route>
           </Routes>
         </BrowserRouter>
