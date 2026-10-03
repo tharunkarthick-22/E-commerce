@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { RiArrowLeftSLine } from "react-icons/ri";
 import { useDispatch, useSelector } from "react-redux";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
@@ -7,13 +7,18 @@ import { increaseQuantity, decreaseQuantity } from "../store/cartSlice";
 const Cart = () => {
   const dispatch = useDispatch();
 
+  const navigate = useNavigate();
+
   const cartProducts = useSelector((state) => state.cart);
 
-  let totalPrice = cartProducts.reduce( (total, product)=> total + product.price*product.quantity, 0)
+  let totalPrice = cartProducts.reduce(
+    (total, product) => total + product.price * product.quantity,
+    0,
+  );
 
-  let checkOut = ()=>{
-    navigate("/thanks")
-  }
+  let checkOut = () => {
+    navigate("/thanks");
+  };
 
   if (cartProducts.length === 0)
     return (
@@ -34,7 +39,6 @@ const Cart = () => {
         </div>
       </div>
     );
-
 
   return (
     <div className="mx-auto">
@@ -116,8 +120,13 @@ const Cart = () => {
                       <AiOutlinePlus className="lg:text-xl my-2 p-1 bg-slate-400 outline-0 rounded" />
                     </button>
                   </div>
-                  <div >
-                    <span>₹</span><span className="text-lg font-bold">{(product.price * product.quantity).toLocaleString("en-IN")}</span>
+                  <div>
+                    <span>₹</span>
+                    <span className="text-lg font-bold">
+                      {(product.price * product.quantity).toLocaleString(
+                        "en-IN",
+                      )}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -125,26 +134,36 @@ const Cart = () => {
           ))}
         </div>
         <div className="shadow-md p-4 rounded-md">
-            <div className="text-xl font-bold">
-              <p>Order Summary</p>
-            </div>
-            <div className="flex justify-between">
-              <span>Sub total</span>
-              <span ><span>₹</span>{totalPrice.toLocaleString("en-IN")}</span>
-            </div>
-            <div className="flex justify-between mb-2">
-              <span>Shipping</span>
-              <span>Free</span>
-            </div>
-            <div className="flex justify-between border-t pt-2">
-              <span className="font-semibold">Total</span>
-              <span className="font-semibold"><span>₹</span>{totalPrice.toLocaleString("en-IN")}</span>
-            </div>
-            <div className="mt-3 font-bold text-xl">
-              <button className="text-center w-full bg-gray-500 p-2 rounded text-white hover:bg-gray-600" onClick={()=>checkOut()}>Proceed to Checkout</button>
-            </div>
+          <div className="text-xl font-bold">
+            <p>Order Summary</p>
           </div>
-
+          <div className="flex justify-between">
+            <span>Sub total</span>
+            <span>
+              <span>₹</span>
+              {totalPrice.toLocaleString("en-IN")}
+            </span>
+          </div>
+          <div className="flex justify-between mb-2">
+            <span>Shipping</span>
+            <span>Free</span>
+          </div>
+          <div className="flex justify-between border-t pt-2">
+            <span className="font-semibold">Total</span>
+            <span className="font-semibold">
+              <span>₹</span>
+              {totalPrice.toLocaleString("en-IN")}
+            </span>
+          </div>
+          <div className="mt-3 font-bold text-xl">
+            <button
+              className="text-center w-full bg-gray-500 p-2 rounded text-white hover:bg-gray-600"
+              onClick={() => checkOut()}
+            >
+              Proceed to Checkout
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
